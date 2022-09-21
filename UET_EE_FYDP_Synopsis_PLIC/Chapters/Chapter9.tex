@@ -3,4 +3,17 @@
 \chapter{Work Division}
 \label{Chapter9}
 
-Clear work division among group members must be indicated. ($1$ page)
+
+The work division among the four members is given below:
+
+\subsection{Fatima's Work}
+She is responsible to Design and Verify the \textbf{Gateway(s)}. This is a block or a device which will convert the interrupts from different sources to interrupt requests based on their triggering type (Level/Edge). It will also take care of interrupt claim and complete message from RISC-V. 
+
+\subsection{Shaheer's Work}
+He is responsible to Design and Verify the \textbf{Target}. This is a block or a device which will prioritize the interrupt requests to be sent to RISC-V. It will be based on mainly two algorithms. User will have to decide the algorithm for prioritization.
+
+\subsection{Ahsan's Work}
+He is responsible to Design and Verify the \textbf{Register Map (Reg Map)}. This module is a set of registers which will be programmed externally to give data to almost every device inside the PLIC. For example, If Gateway wants ie (interrupt enable) signal, then it will take from register map. If \textbf{Target} wants priorities of the enabled interrupts, then it will take from register map. And so on.
+
+\subsection{Ateeqa's Work}
+She is responsible to interface and merge all the modules to a new device which is eventually going to be the PLIC Core to communicate among all the devices like Gateway, Target, Register Map etc.
