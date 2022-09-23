@@ -1,0 +1,14 @@
+\chapter{Problem Statement}
+\label{Chapter2}
+Interrupt is referred as an input signal that has the highest priority for hardware or software events that requires immediate processing of an event. During the early days of computing, the processor had to wait for the signal to process any events. The processor should check every hardware and software program to understand if there is any signal to be processed. The two methods used at early time were Blind Cycle Method and Polling Base Method.\\
+
+When an I/O operation is performed, the device hardware incurs some delay in responding to the software request. This delay corresponds to the time interval starting from the time instance when software makes the I/O operation request, till the device hardware has finished the operation. If this delay is highly predictable due to the fact that any variations in this delay are relatively small then it is possible that the software can initiate a new I/O request after fixed delay. This is precisely what is done in \textbf{Blind Cycle Synchronization}, where the software waits for a fixed time interval assuming that the I/O device hardware has completed the operation within this time interval.\\
+
+The unnecessarily large delays incurred by blind cycle method can be reduced by checking the status of the device hardware either continuously or periodically. Using this status information the software can eliminate any excessive delays and waits only for the
+required duration. Status checking of the device hardware, by the software, is also termed as \textbf{Polling Base Method}. This method would consume a number of clock cycles and makes the processor busy. Just in case, if any signal was generated, the processor would again take some time to process the event, leading to poor system performance. \\
+
+A new mechanism was introduced to overcome this complicated process. In this mechanism, hardware or software will send the signal to a processor, rather than a processor checking for any signal from hardware or software. The signal alerts the processor with the highest priority and suspends the current activities by saving its present state and function, and processes the interrupt immediately, this is known as Interrupt Service Routine (ISR). As it doesn’t last long, the processor restarts normal activities as soon as it is processed.
+
+Interrupt is sent to a processing unit to check proper working of a microprocessor. As mentioned earlier the physical working of a keyboard, mouse or any disk is interpreted by processor. The core will stop its working and allow the interrupt to be processed. When gateway is notified about the completion of interrupt, next interrupt is processed if any. Else it core will resume its work. \\
+
+This platform level interrupt controller is widely used in embedded system. The designers uses interrupt service to test the appropriate working of their processors. 

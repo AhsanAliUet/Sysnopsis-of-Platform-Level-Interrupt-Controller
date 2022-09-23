@@ -16,6 +16,28 @@
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[document]{ragged2e}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{natbib}
+\usepackage{pst-grad}
+\usepackage{pst-plot}
+\usepackage{pst-3dplot}
+\usepackage{pst-vue3d}
+\usepackage{pst-text}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{url}
 
 
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
@@ -43,13 +65,16 @@
 \\
 	~~~~~~~~~~~~Mr. Umer Shahid
 }
+
+
 \authors {
 	2019-FYP-33\\
-	Maja ~~~~~ 2019-EE-xxx\\
-	Saja ~~~~~ 2019-EE-xxx\\
-	Basantay ~~~~~ 2019-EE-xxx\\
-	Billa ~~~~~ 2019-EE-xxx
+	Ahsan Ali ~~~~~~~~~~~~~~~~~~ 2019-EE-115\\
+	Ateeqa Afzal ~~~~~~~~~~~~~~ 2019-EE-101\\
+	Fatima Noor ~~~~~~~~~~~~~~ 2019-EE-104\\
+	Muhammad Shaheer ~~~~~ 2019-EE-137
 }
+
 
 \addresses  {\deptname \\ \univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
 \date       {\today}
@@ -102,6 +127,7 @@
 \textbf{ie} & \textbf{i}nterrupt \textbf{e}nable \\
 \textbf{Reg Map} & \textbf{Reg}ister \textbf{Map}ping \\
 \textbf{FPGA} & \textbf{F}ield \textbf{P}rogrammable \textbf{G}ate \textbf{A}rrays \\
+\textbf{CPU} & \textbf{C}entral \textbf{P}rocessing \textbf{U}nit \\
 }
 
 %% ----------------------------------------------------------------
@@ -110,7 +136,7 @@
 \abstract{
 %\addtocontents{toc}{\vspace{1em}}  % Adds a gap in the Contents, for aesthetics
 
-Abstract of the project is written here (and usually kept to just this page). (Maximum $350$ words)
+Whenever we think that someone has teased us while we are working, that teasing is an interrupt in our work for us. Exactly the same thing happens in the life of computer. While Processor is executing its routine instructions, we interrupt it and ask for the work that is urgent than its routine. Here Interrupt controller comes into being. There are two type of programs in the world of Embedded coding, polling based programs and interrupt based programs. Obviously interrupt based programs are faster than polling based programs because they have low latency and have some handlers to be handle by processor when it is called. We will see that how can we implement Interrupt controller for a large number of interrupts for RISC-V processor.
 
 }
 \clearpage  % Abstract ended, start a new page
@@ -122,17 +148,17 @@ Abstract of the project is written here (and usually kept to just this page). (M
 % Include the chapters of the thesis, as separate files
 % Just uncomment the lines as you write the chapters
 
-\input{./Chapters/Chapter1} % Introduction 
+\input{./ateeqa_chapters/Chapter1} % Introduction 
 
-\input{./Chapters/Chapter2} % Problem Statement
+\input{./ateeqa_chapters/Chapter2} % Problem Statement
 
 \input{./shaheer_chapters/Chapter3} % Literature Review
 
 \input{./shaheer_chapters/Chapter4} % Project Overview and Objectives
 
-\input{./Chapters/Chapter5} % Project Development Methodology/Architecture
+\input{./fatima_chapters/Chapter5} % Project Development Methodology/Architecture
 
-\input{./Chapters/Chapter6} % Project Milestones and Deliverables
+\input{./fatima_chapters/Chapter6} % Project Milestones and Deliverables
 
 \input{./Chapters/Chapter7} % Block Diagram
 
@@ -149,10 +175,42 @@ Abstract of the project is written here (and usually kept to just this page). (M
 %% ----------------------------------------------------------------
 \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 \backmatter
+\bibliographystyle{unsrtnat}  % Use "unsrtnat" BibTeX style for formatting the references
 
-\bibliographystyle{plainnat}  % Use "unsrtnat" BibTeX style for formatting the references
 
-\bibliography{./references.bib}  % The references information is stored in the file named "references.bib"
+%\bibliography{references}  % The references information is stored in the file named "references.bib"
 
-\end{document}  % The End
+	\begin{thebibliography}{00}
+	\bibitem{b1} Wei Chipin, Li Zhao lin, Zheng Qingwei, Ye Jianfei and Li Shenglong, "Design of a configurable multichannel interrupt controller," 2010 Second Pacific-Asia Conference on Circuits, Communications and System, 2010, pp. 327-330, doi: 10.1109/PACCS.2010.5626805.
+	\bibitem{b2} C. Y. Sia, B. A. Rosdi and M. C. Lee, "Synchronous design of 8259 Programmable Interrupt Controller," 2011 IEEE International Conference on Computer Applications and Industrial Electronics (ICCAIE), 2011, pp. 195-200, doi: 10.1109/ICCAIE.2011.6162130.
+
+	\bibitem{b3} Y. Liu, W. Zhang, J. Zhou, Y. Wang, S. Wang and L. Zhang, "A Design of Encoding Arbitration and Interrupt Request for Dynamic Reconfigurable High-Speed Serial Bus in Cyber Physical System," 2019 International Conference on Internet of Things (iThings) and IEEE Green Computing and Communications (GreenCom) and IEEE Cyber, Physical and Social Computing (CPSCom) and IEEE Smart Data (SmartData), 2019, pp. 627-634, doi: 10.1109/iThings/GreenCom/CPSCom/SmartData.2019.00122.
+
+	\bibitem{b4} N. Ito, Y. Oosako, N. Ishiura, H. Kanbara and H. Tomiyama, "Binary Synthesis Implementing External Interrupt Handler as Independent Module," 2017 International Symposium on Rapid System Prototyping (RSP), 2017, pp. 92-98.
+
+	\bibitem{b5} A. Tumeo et al., "An Interrupt Controller for FPGA-based Multiprocessors," 2007 International Conference on Embedded Computer Systems: Architectures, Modeling and Simulation, 2007, pp. 82-87, doi: 10.1109/ICSAMOS.2007.4285737.
+
+	\bibitem{b6}K. F. Baker and P. B. Crilly, "A priority event monitor for an interrupt-driven microprocessor," IEEE Proceedings of the SOUTHEASTCON '91, 1991, pp. 905-909 vol.2, doi: 10.1109/SECON.1991.147891.
+
+	\bibitem{b7} K. F. Baker and P. B. Crilly, "Priority event monitoring for interrupt-driven computer," Conference Record of the 1992 IEEE Industry Applications Society Annual Meeting, 1992, pp. 1751-1755 vol.2, doi: 10.1109/IAS.1992.244521.
+
+	\bibitem{b8} Zijia Guo, Teng Wang, Xin-An Wang and Ziyi Hu, "Design of an optimized low-latency interrupt controller for IMS-DPU," 2013 IEEE 10th International Conference on ASIC, 2013, pp. 1-4, doi: 10.1109/ASICON.2013.6811840.
+
+	\bibitem{b9}A. de Gloria, P. Faraboschi and M. Olivieri, "A self timed interrupt controller: a case study in asynchronous micro-architecture design," Proceedings Seventh Annual IEEE International ASIC Conference and Exhibit, 1994, pp. 296-299, doi: 10.1109/ASIC.1994.404555.
+
+	\bibitem{b10} De Alba, M., Andrade, A., González, J., Gómez-Tagle, J., \& García, A. D. (2007). FPGA design of an efficient and low-cost smart phone interrupt controller. Latin American applied research, 37(1), 59-63.
+
+	\bibitem{b11} Harris, S., 2022. Digital design and computer architecture. Amsterdam: Morgan Kaufmann.
+
+	\bibitem{b12} TAHIR, M., 2020. ARM MICROPROCESSOR SYSTEMS. 1st ed. [S.l.]: CRC PRESS.
+
+	\bibitem{b13} Hennessy, J., Patterson, D. and Arpaci-Dusseau, A., n.d. Computer architecture.
+
+	\bibitem{b14} Bing.com. 2022. Platform Level Interrupt Controller. [online] Available at: <https://www.bing.com/ck/a?!\&\&p=8315da1b9e1496e5JmltdHM9MTY2MzgwND \\ gwMCZpZ3VpZD0yZTgyNmJiNS04Njk4LTZlNjktM2M4Zi03YWRiODc5OTZmMGYmaW5za \\ WQ9NTI5MA\&ptn=3\&hsh=3\&fclid=2e826bb5-8698-6e69-3c8f-7adb87996f0f\&u=a1aHR0cHM6Ly9 \\ yb2Fsb2dpYy5jb20vcG9ydGZvbGlvL3BsYXRmb3JtLWxldmVsLWludGVycnVwdC1jb250cm9sbGVyLXBsaWMv\&ntb=1> [Accessed 3 July 2022].
+
+	\bibitem{b15} Chromitem-soc.readthedocs.io. 2022. 18. Platform Level Interrupt Controller (PLIC) — Chromite M SoC Manual 0.11.0 documentation. [online] Available at: <https://chromitem-soc.readthedocs.io/en/latest/plic.html\#> [Accessed 3 July 2022].
+
+
+	\end{thebibliography}
+\end{document}
 %% ----------------------------------------------------------------
