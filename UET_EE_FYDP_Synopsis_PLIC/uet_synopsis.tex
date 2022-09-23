@@ -13,6 +13,9 @@
 \usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
 \usepackage{url}
 \usepackage{natbib}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{adjustbox}
 
 
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
@@ -98,6 +101,7 @@
 \textbf{PLIC} & \textbf{P}latform \textbf{L}evel \textbf{I}nterrupt \textbf{C}ontroller \\
 \textbf{ie} & \textbf{i}nterrupt \textbf{e}nable \\
 \textbf{Reg Map} & \textbf{Reg}ister \textbf{Map}ping \\
+\textbf{FPGA} & \textbf{F}ield \textbf{P}rogrammable \textbf{G}ate \textbf{A}rrays \\
 }
 
 %% ----------------------------------------------------------------
@@ -122,9 +126,9 @@ Abstract of the project is written here (and usually kept to just this page). (M
 
 \input{./Chapters/Chapter2} % Problem Statement
 
-\input{./Chapters/Chapter3} % Literature Review
+\input{./shaheer_chapters/Chapter3} % Literature Review
 
-\input{./Chapters/Chapter4} % Project Overview and Objectives
+\input{./shaheer_chapters/Chapter4} % Project Overview and Objectives
 
 \input{./Chapters/Chapter5} % Project Development Methodology/Architecture
 
@@ -140,7 +144,7 @@ Abstract of the project is written here (and usually kept to just this page). (M
 
 %% ----------------------------------------------------------------
 \appendix
-\input{./Chapters/Introduction to Latex}	% For students' reference only. Do not include this file in your final synopsis by commenting out or omitting this bit.
+%\input{./Chapters/Introduction to Latex}	% For students' reference only. Do not include this file in your final synopsis by commenting out or omitting this bit.
 
 %% ----------------------------------------------------------------
 \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
@@ -148,7 +152,7 @@ Abstract of the project is written here (and usually kept to just this page). (M
 
 \bibliographystyle{plainnat}  % Use "unsrtnat" BibTeX style for formatting the references
 
-\bibliography{references}  % The references information is stored in the file named "references.bib"
+\bibliography{./references.bib}  % The references information is stored in the file named "references.bib"
 
 \end{document}  % The End
 %% ----------------------------------------------------------------
